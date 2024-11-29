@@ -1,0 +1,205 @@
+.section {
+  padding: 8rem 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.subtitle {
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: var(--color-slate);
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 300;
+  margin-top: 1rem;
+  letter-spacing: 0.05em;
+}
+
+/* Stores Section */
+.stores-banner {
+  width: 100%;
+  height: 40vh;
+  background-image: url('https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&q=80');
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 4rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stores-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+}
+
+.banner-content {
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+.banner-content h2 {
+  font-size: 3.5rem;
+  font-weight: 200;
+  margin-bottom: 1rem;
+  letter-spacing: 0.1em;
+}
+
+.banner-content p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
+
+.stores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.store-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.store-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.store-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+}
+
+.store-card:hover .store-image {
+  transform: scale(1.1);
+}
+
+.store-content {
+  padding: 2rem;
+  text-align: center;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.8));
+}
+
+.store-content i {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-ink);
+  transition: transform 0.3s ease;
+}
+
+.store-card:hover .store-content i {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.store-content h3 {
+  font-size: 1.8rem;
+  font-weight: 200;
+  margin-bottom: 1rem;
+  letter-spacing: 0.08em;
+}
+
+.store-content p {
+  color: var(--color-slate);
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.store-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.store-details p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  margin: 0;
+  transition: transform 0.3s ease;
+  font-size: 1rem;
+}
+
+.store-details p:hover {
+  transform: translateX(5px);
+}
+
+.store-details i {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* Contact Section Social Links */
+.social-link {
+  transition: all 0.3s ease;
+}
+
+.social-link[href*="instagram"]:hover {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: white;
+}
+
+.social-link[href*="facebook"]:hover {
+  background: #4267B2;
+  color: white;
+}
+
+.social-link[href*="message"]:hover,
+.social-link[href*="chat"]:hover {
+  background: #25D366;
+  color: white;
+}
+
+.social-link[href*="mail"]:hover {
+  background: #EA4335;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .stores-banner {
+    height: 30vh;
+  }
+  
+  .banner-content h2 {
+    font-size: 2.5rem;
+  }
+  
+  .banner-content p {
+    font-size: 1rem;
+  }
+  
+  .stores-grid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+  
+  .store-content h3 {
+    font-size: 1.5rem;
+  }
+}
