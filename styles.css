@@ -35,11 +35,12 @@ body::before {
     content: '';
     position: fixed;
     inset: 0;
-    background-image: url('https://images.unsplash.com/photo-1567095761054-7a02e69e5c43?auto=format&fit=crop&q=80&w=2340&ixlib=rb-4.0.3');
-    opacity: 0.1;
+    background-image: url('/src/imgs/back.jpg');
+    opacity: 0.5;
     mix-blend-mode: multiply;
     pointer-events: none;
     z-index: 1;
+    background-size: cover;
 }
 
 /* Background image */
@@ -72,6 +73,7 @@ body::after {
     height: 400px;
     cursor: pointer;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 2;
 }
 
 .product-card:hover {
